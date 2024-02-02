@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:400,500");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: baseline;
+}
+
+body {
+    background-image: linear-gradient(to right bottom, #d959ed, #c657ee, #b155ee, #9a53ee, #8152ed, #5f6df9, #3782ff, #0093ff, #00b7ff, #00d3f2, #00e8bd, #76f681);
+  color: rgb(5, 95, 73);
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.container {
+  border-radius: 3px;
+  position: relative;
+  width: 450px;
+  height: 150px;
+  padding: 40px 50px;
+  display: table;
+  background-color: #fff;
+  box-shadow: 0 15px 20px 0 #000;
+  border-radius: 8px;
+}
+
+#newQuotes {
+    position: relative;
+    height: 38px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background-color: rgb(16, 191, 197);
+    outline: none;
+    font-size: 0.85em;
+    padding: 8px 18px 6px 18px;
+    margin-top: 90px;
+    margin-left: 160px;
+    opacity: 1;
+    cursor: pointer;
+    box-shadow: 0 5px 7px 0 rgb(58, 57, 57);
+  }
+
+  #newQuotes:hover{
+    color:  rgb(24, 5, 78);
+    background-color: rgb(179, 255, 128);
+  }
+
+  .quote-box #quotes {
+    text-align: center;
+    width: 450px;
+    height: auto;
+    clear: both;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+    font-size: 2em;
+  }
+
+  .quote-box #author {
+    width: 450px;
+    height: auto;
+    clear: both;
+    padding-top: 20px;
+    font-size: 1.25em;
+    text-align: right;
+  }

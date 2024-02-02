@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="quote-box">
+            <div id="quotes"></div>
+            <div id="author"></div>
+        
+            <button id="newQuotes">New Quotes</button>
+        </div>
+    </div>
+
+
+    <script>
+
+        let quotes = document.getElementById('quotes');
+        let author = document.getElementById('author');
+        let newQuotes = document.getElementById('newQuotes');
+
+        let realData = "";
+        let quotesData = "";
+
+        const getNewQuotes = () => {
+            const min = 1;
+            const max = 1640;
+            let rnum = Math.floor((Math.random() * (max - min + 1)) + min);
+            // console.log(rnum);
+            quotesData = realData[rnum];
+            quotes.innerHTML = `${quotesData.text}`;
+            if(quotesData.author == null){
+                author.innerHTML = `-Unknown Author`;
+            }else{
+                author.innerHTML = `-${quotesData.author}`;
+            }
+            // console.log(realData[rnum].text);
+            // console.log(realData[rnum].author);
+        }
+
+
+        const getQuotes = async () => {
+            const api = "https://type.fit/api/quotes";
+            try {
+                let data = await fetch(api);
+                realData = await data.json();
+                getNewQuotes();
+                // console.log(realData[0].text);
+                // console.log(realData[0].author);
+            } catch (error) {
+                
+            }
+        }
+        newQuotes.addEventListener("click", getQuotes);
+
+        getQuotes();
+
+    </script>
+</body>
+</html>

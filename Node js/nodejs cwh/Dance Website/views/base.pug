@@ -1,0 +1,27 @@
+//- layout.pug
+doctype html
+html
+  head
+    title Super Dance Academy
+    block scripts
+    block style
+  body
+    nav#navbar
+        ul
+            div#logo
+                img(src="/static/dal.jpg")
+                | SDA
+            li #[a(href = "/") Home]
+            li #[a(href = "/") About]
+            li #[a(href = "/") Services]
+            li #[a(href = "/") Class Info]
+            li #[a(href = "/") Contact Us]
+
+    block content
+
+
+
+    footer#footer
+        | Copyright © 2021 SuperDanceAcademy.com | All rights reserve
+    
+    
